@@ -7,30 +7,30 @@
 #include <string>
 #include <iomanip>
 
-/**************   MAIN SETTINGS   ***************/
-
-#define T_MAX                           1000
-#define H                               0.01
-#define N_PTS                           10000
-#define INITIAL_CONDITIONS_1            0.1
-#define INITIAL_CONDITIONS_2            0.1
-#define INITIAL_CONDITIONS_3            0.1
-
-#define PARAM_VALUES_1                  0.05
-#define PARAM_VALUES_2                  0.35
-
-#define N_VALUE                         1
-
-#define PRE_PEAKFINDER_SLICE_K          0.3      
-#define PEAKFINDER_SLICE_POINT_COUNT    12
-/************************************************/
-/**************   FUNC SETTINGS   ***************/
-
-#define PARAM_A 0.2
-#define PARAM_B 0.2
-#define PARAM_C 5.7
-
-/************************************************/
+///**************   MAIN SETTINGS   ***************/
+//
+//#define T_MAX                           1000
+//#define H                               0.01
+//#define N_PTS                           10000
+//#define INITIAL_CONDITIONS_1            0.1
+//#define INITIAL_CONDITIONS_2            0.1
+//#define INITIAL_CONDITIONS_3            0.1
+//
+//#define PARAM_VALUES_1                  0.05
+//#define PARAM_VALUES_2                  0.35
+//
+//#define N_VALUE                         1
+//
+//#define PRE_PEAKFINDER_SLICE_K          0.3      
+//#define PEAKFINDER_SLICE_POINT_COUNT    12
+///************************************************/
+///**************   FUNC SETTINGS   ***************/
+//
+//#define PARAM_A 0.2
+//#define PARAM_B 0.2
+//#define PARAM_C 5.7
+//
+///************************************************/
 
 enum Mode 
 {
