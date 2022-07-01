@@ -1,6 +1,6 @@
 T_MAX:1000
 N_PTS:1000
-H:0.01
+H:0.001
 
 #Начальные условия
 INITIAL_CONDITIONS_1:0.1
@@ -9,13 +9,13 @@ INITIAL_CONDITIONS_3:0.1
 
 #Диапазон вычислений
 PARAM_VALUES_1:0.05
-PARAM_VALUES_2:0.35
+PARAM_VALUES_2:3.5
 
 #Высчитываемый параметр
-N_VALUE:1
+N_VALUE:0
 
 #Обрезка точек перед нахождением пиков (срез массива PRE_PEAKFINDER_SLICE_K * sizeArr:sizeArr)
-PRE_PEAKFINDER_SLICE_K:0.25
+PRE_PEAKFINDER_SLICE_K:0.3
 
 #Параметры A, B и C
 PARAM_A:0.2
@@ -27,5 +27,7 @@ PARAM_C:5.7
 # 2 - Параметр B
 # 3 - Параметр C
 MODE:1
+
+MEMORY_LIMIT:1
 
 OUTPATH:C:\\Users\\kshir\\Desktop\\mat.csv
