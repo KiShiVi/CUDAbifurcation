@@ -360,7 +360,6 @@ namespace KiShiVi
 				kdeResult[idx] = 1;
 				return;
 			}
-
 			for (int w = 0; w < k1 - 1; ++w)
 			{
 				delt = w * k2 + kdeSamplesInterval1;
@@ -369,7 +368,8 @@ namespace KiShiVi
 				data2 = 0;
 				for (int m = 0; m < _outSize; ++m)
 				{
-					data2 += expf(-((((data[idx * nIter + m] - delt) / kdeSmoothH) * ((data[idx * nIter + m] - delt) / kdeSmoothH)) / 2));
+					float tempData = (data[idx * nIter + m] - delt) / kdeSmoothH;
+					data2 += expf(-((tempData * tempData) / 2));
 				}
 				// Найти здесь - является ли здесь data2 пиком или нет. Если да - инкремируем resultKde
 				if (w < 2)
