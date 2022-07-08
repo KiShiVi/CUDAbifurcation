@@ -8,15 +8,7 @@
 #include <iostream>
 #include <iomanip>
 
-#include "../../kishivi_cuda_tools.cuh"
-
-enum Mode
-{
-	SYMMETRY_MODE,
-	PARAM_A_MODE,
-	PARAM_B_MODE,
-	PARAM_C_MODE
-};
+#include "kishivi_cuda_tools.cuh"
 
 namespace KiShiVi
 {
@@ -103,8 +95,7 @@ namespace KiShiVi
 			{
 				if (i == lastIteration - 1)
 				{
-					h_dataTimes = slice(globalParamValues, maxNpts * i + 1, _nPts);
-
+					h_dataTimes = slice(globalParamValues, maxNpts * i, _nPts);
 					maxNpts = _nPts - (maxNpts * i);
 				}
 				else

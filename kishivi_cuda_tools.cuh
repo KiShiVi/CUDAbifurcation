@@ -6,6 +6,14 @@
 #include <stddef.h>
 #include <iostream>
 
+enum Mode
+{
+	SYMMETRY_MODE,
+	PARAM_A_MODE,
+	PARAM_B_MODE,
+	PARAM_C_MODE
+};
+
 namespace KiShiVi
 {
 	namespace CUDA

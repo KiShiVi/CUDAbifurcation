@@ -1,15 +1,19 @@
 T_MAX:1000
 N_PTS:1000
-H:0.01
+H:0.1
 
 #Начальные условия
 INITIAL_CONDITIONS_1:0.1
 INITIAL_CONDITIONS_2:0.1
 INITIAL_CONDITIONS_3:0.1
 
-#Диапазон вычислений
+#Диапазон вычислений 1
 PARAM_VALUES_1:0.05
 PARAM_VALUES_2:0.35
+
+#Диапазон вычислений 2
+PARAM_VALUES_3:0.05
+PARAM_VALUES_4:0.35
 
 #Высчитываемый параметр
 N_VALUE:0
@@ -26,7 +30,18 @@ PARAM_C:5.7
 # 1 - Параметр A
 # 2 - Параметр B
 # 3 - Параметр C
-MODE:1
+# Симметрию использовать только в MODE_1! 
+# Ещё я вам запрещаю обходить одинаковые параметры!
+
+MODE_1:1
+MODE_2:2
+
+KDE_SAMPLING:10
+
+KDE_SAMPLES_INTERVAL_1:-50
+KDE_SAMPLES_INTERVAL_2:50
+
+KDE_SMOOT_H:0.05
 
 MEMORY_LIMIT:1
 
