@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <stdio.h>
 
 #include "kishivi_cuda_tools.cuh"
 
@@ -296,10 +297,15 @@ namespace KiShiVi
 				x[2] = x[2] + localH2 * (b + x[2] * (x[0] - c));
 				x[1] = x[1] + localH2 * (x[0] + a * x[1]);
 				x[0] = x[0] + localH2 * (-x[1] - x[2]);
+
+				if (abs(x[nValue]) > 10000.0f)
+				{
+					kdeResult[idx] = 0;
+					return;
+				}
 			}
 
 			/***********************************************/
-
 			int _outSize = 0;
 			for (size_t i = 1 + (prePeakFinderSliceK * (TMax / h)); i < (TMax / h) - 1; ++i)
 			{
@@ -329,7 +335,6 @@ namespace KiShiVi
 					}
 				}
 			}
-			
 			//_outSize - кол-во пиков
 
 			float k1 = kdeSampling * _outSize; // K_1
@@ -360,6 +365,7 @@ namespace KiShiVi
 				kdeResult[idx] = 1;
 				return;
 			}
+
 			for (int w = 0; w < k1 - 1; ++w)
 			{
 				delt = w * k2 + kdeSamplesInterval1;
